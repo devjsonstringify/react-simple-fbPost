@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Button1 from '@material-ui/core/Button'
-import ButtonIcon from './buttonIcon'
+import Row from './layout/row'
+import Col from './layout/col-grid'
 import Button from './button'
 import Counter from './counter'
 import Comment from './comment'
@@ -54,54 +54,49 @@ class PostActionBar extends Component {
 		return (
 			<div className="col-lg-12">
 				<div className="container">
-					<div className="row">
-						<div className="col">
+					<Row>
+						<Col>
 							{this.state.likeIsClicked && (
 								<Counter counter={this.state.likeCount} />
 							)}
-						</div>
-						<div className="col">
+						</Col>
+						<Col>
 							<p>comment count</p>
-						</div>
-						<div className="col">
+						</Col>
+						<Col>
 							<p>shares count</p>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col">
+						</Col>
+					</Row>
+
+					<Row id="fbBttons">
+						<Col>
 							<Button
 								icon="thumbs-up"
 								handleClick={this.likeIsClicked}
 								btn={'Like'}
 							/>
-						</div>
-						<div className="col">
+						</Col>
+						<Col>
 							<Button
 								icon="comment-alt"
 								handleClick={this.commentIsClicked}
 								btn={'comment'}
 							/>
-						</div>
-						<div className="col">
+						</Col>
+						<Col>
 							<Button
 								icon="share"
 								handleClick={this.shareIsClicked}
 								btn={'share'}
 							/>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-lg-12">
+						</Col>
+					</Row>
+
+					<Row>
+						<Col>
 							{this.state.commentIsClicked && <Comment maxLetters={140} />}
-						</div>
-						<div>
-						<ButtonIcon icon="like" />
-							<Button1 size="large" variant="contained" className="theme">
-								
-								Default
-							</Button1>
-						</div>
-					</div>
+						</Col>
+					</Row>
 				</div>
 			</div>
 		)

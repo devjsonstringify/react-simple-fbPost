@@ -6,9 +6,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-color: #e9ebee;
 
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root{
+  background-color: #ffffff;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: 1px solid #ccd0d5;
+  border-radius: 5px;
+}
+.col-lg-12 > .figure {
+  display: flex;
+}
+.col-lg-12 > .figure > img{
+  border-radius: 100%;
+}
+#fbBttons {
+  border-bottom: 1px solid #ccd0d5;
+  border-top: 1px solid #ccd0d5;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Photos = (props) => {
+const Photos = ({ user }) => {
 	return (
 		<React.Fragment>
-			{props.user.photos.map((img) => {
+			{user.photos.map((img) => {
 				return <img src={img} alt={Math.random()} key={Math.random()} />
 			})}
 		</React.Fragment>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './css/App.css'
+import Row from './components/layout/row'
 import User from './components/user'
 import Post from './components/post'
 import PostActionBar from './components/postActionBar'
@@ -32,19 +33,17 @@ class FacebookPost extends Component {
 			},
 			post: {
 				content: 'Tech has taken a battering',
-				photos: ['assets/post-react.png']
+				photos: ['assets/post-image.jpg']
 			}
 		}
 		return (
-			<div className='row'>
+			<Row>
 				<User user={api.author} />
 				<Post content={api.post} photos={api.post} user={api.author} />
 				<PostActionBar />
-			</div>
+			</Row>
 		)
 	}
 }
 
 export default FacebookPost
-
-

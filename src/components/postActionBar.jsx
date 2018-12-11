@@ -4,6 +4,7 @@ import Col from './layout/col-grid'
 import Button from './button'
 import Counter from './counter'
 import Comment from './comment'
+import ShareOption from './share-option'
 
 class PostActionBar extends Component {
 	constructor(props) {
@@ -69,21 +70,21 @@ class PostActionBar extends Component {
 					</Row>
 
 					<Row id="fbBttons">
-						<Col>
+						<Col paddingLeft="0" paddingRight="0">
 							<Button
 								icon="thumbs-up"
 								handleClick={this.likeIsClicked}
 								btn={'Like'}
 							/>
 						</Col>
-						<Col>
+						<Col paddingLeft="0" paddingRight="0">
 							<Button
 								icon="comment-alt"
 								handleClick={this.commentIsClicked}
 								btn={'comment'}
 							/>
 						</Col>
-						<Col>
+						<Col paddingLeft="0" paddingRight="0">
 							<Button
 								icon="share"
 								handleClick={this.shareIsClicked}
@@ -96,6 +97,7 @@ class PostActionBar extends Component {
 						<Col>
 							{this.state.commentIsClicked && <Comment maxLetters={140} />}
 						</Col>
+						<Col>{this.state.shareIsClicked && <ShareOption />}</Col>
 					</Row>
 				</div>
 			</div>

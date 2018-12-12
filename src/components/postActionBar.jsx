@@ -4,7 +4,7 @@ import Col from './layout/col-grid'
 import Button from './button'
 import Counter from './counter'
 import Comment from './comment'
-import ShareOption from './share-option'
+import Share from './shares'
 
 class PostActionBar extends Component {
 	constructor(props) {
@@ -95,7 +95,7 @@ class PostActionBar extends Component {
 
 					<Row>
 						{this.state.commentIsClicked && <Comment maxLetters={140} />}
-						{this.state.shareIsClicked && <ShareOption />}
+						{this.state.shareIsClicked && <Share />}
 					</Row>
 				</div>
 			</div>

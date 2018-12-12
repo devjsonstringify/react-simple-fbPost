@@ -6,5 +6,3 @@ const Shares = () => {
 }
 
 export default Shares
-
-// FIXME: share option not working..

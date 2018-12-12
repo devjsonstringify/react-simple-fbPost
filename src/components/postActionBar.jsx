@@ -94,10 +94,8 @@ class PostActionBar extends Component {
 					</Row>
 
 					<Row>
-						<Col>
-							{this.state.commentIsClicked && <Comment maxLetters={140} />}
-						</Col>
-						<Col>{this.state.shareIsClicked && <ShareOption />}</Col>
+						{this.state.commentIsClicked && <Comment maxLetters={140} />}
+						{this.state.shareIsClicked && <ShareOption />}
 					</Row>
 				</div>
 			</div>

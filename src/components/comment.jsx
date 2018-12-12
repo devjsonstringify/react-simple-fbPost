@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Col from './layout/col-grid'
 
 class Comment extends Component {
 	constructor(props) {
@@ -26,7 +27,7 @@ class Comment extends Component {
 			backgroundColor: '#f2f3f5'
 		}
 		return (
-			<React.Fragment>
+			<Col>
 				<textarea
 					style={style}
 					className="form-control"
@@ -34,7 +35,7 @@ class Comment extends Component {
 					onChange={this.handleChange}
 				/>
 				<small>{maxLetters - characterCount} Remaining</small>
-			</React.Fragment>
+			</Col>
 		)
 	}
 }

@@ -15,17 +15,26 @@ code {
 }
 
 #root{
-  background-color: #ffffff;
-  padding-top: 1em;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 1em;
+  border-radius: 5px;
+}
+#root > .col {
+  background-color: #ffffff;
   border: 1px solid #ccd0d5;
   border-radius: 5px;
+}
+#root > .col:first-child {
+  margin-top: 0 !important;
 }
 .col-lg-12 > .figure {
   display: flex;
 }
 .col-lg-12 > .figure > img{
   border-radius: 100%;
+  max-width: 50px;
+  max-height: 50px;
 }
 #fbBttons {
   border-bottom: 1px solid #ccd0d5;

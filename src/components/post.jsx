@@ -6,7 +6,7 @@ import Col from './layout/col-grid'
 
 const Post = ({ content, photos }) => {
 	return (
-		<div className="col-lg-12">
+		<Col col="lg-12" paddingLeft="0" paddingRight="0">
 			<Row>
 				<Col col="lg-12">
 					<Content user={content} />
@@ -15,7 +15,7 @@ const Post = ({ content, photos }) => {
 					<Photos user={photos} />
 				</Col>
 			</Row>
-		</div>
+		</Col>
 	)
 }
 export default Post

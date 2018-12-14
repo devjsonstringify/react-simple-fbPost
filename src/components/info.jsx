@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Info = (props) => {
+const Info = ({ user }) => {
 	return (
 		<React.Fragment>
-			<p className='h6'>{props.user.name}</p>
+			<p className="h6">{user.name}</p>
 		</React.Fragment>
 	)
 }

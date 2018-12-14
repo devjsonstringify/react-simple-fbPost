@@ -28,12 +28,14 @@ class FacebookPost extends Component {
 	render() {
 		const api = [
 			{
+				id: 1,
 				name: 'Business Insider',
 				avatarUrl: 'assets/img/image-user.png',
 				content: 'Tech has taken a battering',
 				photos: ['assets/post-image.jpg']
 			},
 			{
+				id: 2,
 				name: 'Reactjs',
 				avatarUrl: 'assets/img/react.png',
 				content:
@@ -41,6 +43,7 @@ class FacebookPost extends Component {
 				photos: ['https://dummyimage.com/600x400/c21fc2/fff.jpg&text=react']
 			},
 			{
+				id: 3,
 				name: 'Vue',
 				avatarUrl: 'assets/img/vue.png',
 				content:
@@ -48,6 +51,7 @@ class FacebookPost extends Component {
 				photos: ['https://dummyimage.com/600x400/2e032e/fff.jpg&text=vue']
 			},
 			{
+				id: 4,
 				name: 'Angular',
 				avatarUrl: 'assets/img/angular.png',
 				content:
@@ -60,7 +64,11 @@ class FacebookPost extends Component {
 			<React.Fragment>
 				{api.map((user) => {
 					return (
-						<Col paddingTop="15px" paddingBottom="15px" marginTop="1em">
+						<Col
+							key={user.id}
+							paddingTop="15px"
+							paddingBottom="15px"
+							marginTop="1em">
 							<User user={user} />
 							<Post content={user} photos={user} user={user} />
 							<PostActionBar />

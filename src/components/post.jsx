@@ -8,12 +8,8 @@ const Post = ({ content, photos }) => {
 	return (
 		<Col col="lg-12" paddingLeft="0" paddingRight="0">
 			<Row>
-				<Col col="lg-12">
-					<Content user={content} />
-				</Col>
-				<Col col="lg-12">
-					<Photos user={photos} />
-				</Col>
+				<Content user={content} />
+				<Photos user={photos} />
 			</Row>
 		</Col>
 	)

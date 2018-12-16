@@ -1,7 +1,12 @@
 import React from 'react'
+import Col from './layout/col-grid'
 
 const Content = ({ user }) => {
-	return <p>{user.content}</p>
+	return (
+		<Col>
+			<p>{user.content}</p>
+		</Col>
+	)
 }
 
 export default Content

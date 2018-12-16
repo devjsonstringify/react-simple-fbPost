@@ -1,35 +1,33 @@
 import React from 'react'
 import Col from './layout/col-grid'
+import ShareItem from './shareItem';
+
 
 const ShareOption = () => {
-	const style = {
-		flexDirection: 'column',
-		alignContent: 'end'
-	}
+
+
+	const options = [
+		{
+			href: 'http://domain.com',
+			item: 'Share now'
+		},
+		{
+			href: 'http://domain.com',
+			item: 'Share..'
+		},
+		{
+			href: 'http://domain.com',
+			item: 'Share a message'
+		},
+		{
+			href: 'http://domain.com',
+			item: 'Share in group'
+		}
+		
+	]
 	return (
 		<Col>
-			<ul className="nav" style={style}>
-				<li className="nav-item">
-					<a className="nav-link active" href="http://domain.com">
-						Share Now
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="http://domain.com">
-						Share...
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="http://domain.com">
-						Share as Message
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link " href="http://domain.com">
-						Share in Group
-					</a>
-				</li>
-			</ul>
+			<ShareItem options={options}/>
 		</Col>
 	)
 }

@@ -3,8 +3,8 @@ import React from 'react'
 const Photos = ({ user }) => {
 	return (
 		<React.Fragment>
-			{user.photos.map((img) => {
-				return <img src={img} alt={Math.random()} key={Math.random()} />
+			{user.photos.map((photo) => {
+				return <img src={photo.img} alt={photo.alt} key={photo.alt} />
 			})}
 		</React.Fragment>
 	)

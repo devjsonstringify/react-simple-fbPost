@@ -7,14 +7,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #e9ebee;
-
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-#root{
+#root {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 1em;
@@ -31,19 +30,33 @@ code {
 .col-lg-12 > .figure {
   display: flex;
 }
-.col-lg-12 > .figure > img{
+.col-lg-12 > .figure > img {
   border-radius: 100%;
   max-width: 50px;
   max-height: 50px;
+}
+.row.postDisplay {
+  margin-top: 1em;
+}
+.row.postDisplay > .col-12 {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.postDisplay img {
+  border-radius: 100%;
+  max-width: 40px;
+  max-height: 40px;
 }
 #fbBttons {
   border-bottom: 1px solid #ccd0d5;
   border-top: 1px solid #ccd0d5;
 }
 #fbBttons > .col:hover {
-  background-color: rgba(29, 33, 41, .04);
+  background-color: rgba(29, 33, 41, 0.04);
 }
 .btn-link.btn-lg:hover {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }

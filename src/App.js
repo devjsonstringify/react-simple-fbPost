@@ -95,7 +95,7 @@ class FacebookPost extends Component {
 							marginTop="1em">
 							<User user={user} />
 							<Post content={user} photos={user} user={user} />
-							<PostActionBar />
+							<PostActionBar user={user} />
 						</Col>
 					)
 				})}

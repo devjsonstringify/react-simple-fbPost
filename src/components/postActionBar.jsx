@@ -5,17 +5,38 @@ import Button from "./button";
 import Counter from "./counter";
 import Comment from "./comment";
 import Share from "./shares";
+import LikeEmoji from "./likeEmoji";
 
 class PostActionBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       likeCount: 0,
+      likeHover: false,
       likeIsClicked: false,
       commentIsClicked: false,
       shareIsClicked: false,
     };
   }
+
+  //test
+  showEmoji = (event) => {
+    event.stopPropagation();
+    console.log(event.nativeEvent);
+    setTimeout(() => {
+      this.setState((prevState) => ({ likeHover: !prevState.likeHover }));
+    }, 2000);
+  };
+
+  hideEmoji = (event) => {
+    event.stopPropagation();
+    console.log(event.nativeEvent);
+    setTimeout(() => {
+      this.setState({
+        likeHover: false,
+      });
+    }, 1000);
+  };
 
   //like increment
   handleLikeCount = () => {
@@ -53,6 +74,7 @@ class PostActionBar extends Component {
   };
 
   render() {
+    console.log(this.state.likeHover);
     return (
       <div className="col-lg-12">
         <div className="container">
@@ -70,11 +92,15 @@ class PostActionBar extends Component {
             </Col>
           </Row>
 
+          <LikeEmoji isVisible={this.state.likeHover} />
+
           <Row id="fbBttons">
             <Col paddingLeft="0" paddingRight="0">
               <Button
                 icon="thumbs-up"
                 handleClick={this.likeIsClicked}
+                onMouseOver={this.showEmoji}
+                onMouseOut={this.hideEmoji}
                 btn={"Like"}
               />
             </Col>

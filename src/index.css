@@ -49,6 +49,14 @@ code {
   max-width: 40px;
   max-height: 40px;
 }
+#emojis > button {
+  width: auto;
+  padding: 0;
+  font-size: 2rem;
+}
+#emojis > button > svg {
+  margin: 0 !important;
+}
 #fbBttons {
   border-bottom: 1px solid #ccd0d5;
   border-top: 1px solid #ccd0d5;

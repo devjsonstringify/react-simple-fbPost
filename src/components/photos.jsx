@@ -1,14 +1,13 @@
-import React from 'react'
-import Col from './layout/col-grid'
+import React from "react";
+import Row from "./layout/row";
+import GridPhotos from "./layout/gridPhotos";
 
 const Photos = ({ user }) => {
-	return (
-			<Col col="lg-12" paddingLeft="0" paddingRight="0">
-				{user.photos.map((photo) => {
-					return <img src={photo.img} alt={photo.alt} key={photo.alt} />
-				})}
-			</Col>
-	)
-}
+  return (
+    <Row>
+      <GridPhotos user={user} />
+    </Row>
+  );
+};
 
-export default Photos
+export default Photos;

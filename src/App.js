@@ -31,7 +31,6 @@ library.add(
   faKissWinkHeart
 );
 
-console.log(Api);
 class FacebookPost extends Component {
   render() {
     return (

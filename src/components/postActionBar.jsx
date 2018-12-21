@@ -22,7 +22,7 @@ class PostActionBar extends Component {
   //test
   showEmoji = (event) => {
     event.stopPropagation();
-    console.log(event.nativeEvent);
+    // console.log(event.nativeEvent);
     setTimeout(() => {
       this.setState((prevState) => ({ likeHover: !prevState.likeHover }));
     }, 2000);
@@ -30,7 +30,7 @@ class PostActionBar extends Component {
 
   hideEmoji = (event) => {
     event.stopPropagation();
-    console.log(event.nativeEvent);
+    // console.log(event.nativeEvent);
     setTimeout(() => {
       this.setState({
         likeHover: false,
@@ -74,7 +74,6 @@ class PostActionBar extends Component {
   };
 
   render() {
-    console.log(this.state.likeHover);
     return (
       <div className="col-lg-12">
         <div className="container">
@@ -99,8 +98,8 @@ class PostActionBar extends Component {
               <Button
                 icon="thumbs-up"
                 handleClick={this.likeIsClicked}
-                onMouseOver={this.showEmoji}
-                onMouseOut={this.hideEmoji}
+                onMouseEnter={this.showEmoji}
+                onMouseLeave={this.hideEmoji}
                 btn={"Like"}
               />
             </Col>

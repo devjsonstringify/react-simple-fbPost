@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonIcon from "./buttonIcon";
 
-const Button = ({ handleClick, onMouseOver, onMouseOut, icon, btn }) => {
+const Button = ({ handleClick, onMouseEnter, onMouseLeave, icon, btn }) => {
   const style = {
     width: "100%",
     border: "0",
@@ -9,8 +9,8 @@ const Button = ({ handleClick, onMouseOver, onMouseOut, icon, btn }) => {
   return (
     <button
       onClick={handleClick}
-      onMouseOver={onMouseOver ? onMouseOver : null}
-      onMouseOut={onMouseOut ? onMouseOut : null}
+      onMouseEnter={onMouseEnter ? onMouseEnter : null}
+      onMouseLeave={onMouseLeave ? onMouseLeave : null}
       style={style}
       type="button"
       className="btn-link btn-lg">

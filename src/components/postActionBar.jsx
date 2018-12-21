@@ -22,7 +22,6 @@ class PostActionBar extends Component {
   //test
   showEmoji = (event) => {
     event.stopPropagation();
-    // console.log(event.nativeEvent);
     setTimeout(() => {
       this.setState((prevState) => ({ likeHover: !prevState.likeHover }));
     }, 2000);
@@ -30,7 +29,6 @@ class PostActionBar extends Component {
 
   hideEmoji = (event) => {
     event.stopPropagation();
-    // console.log(event.nativeEvent);
     setTimeout(() => {
       this.setState({
         likeHover: false,

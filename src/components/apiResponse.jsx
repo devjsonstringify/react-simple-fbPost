@@ -7,6 +7,10 @@ const api = [
     content: "Tech has taken a battering",
     photos: [
       {
+        img: null,
+        alt: "Business-insiders",
+      },
+      {
         img: "assets/post-image.jpg",
         alt: "Business-insider",
       },

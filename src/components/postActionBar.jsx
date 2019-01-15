@@ -81,12 +81,6 @@ class PostActionBar extends Component {
                 <Counter counter={this.state.likeCount} />
               )}
             </Col>
-            <Col>
-              <p>comment count</p>
-            </Col>
-            <Col>
-              <p>shares count</p>
-            </Col>
           </Row>
 
           <LikeEmoji isVisible={this.state.likeHover} />

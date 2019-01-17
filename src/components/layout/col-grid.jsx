@@ -9,10 +9,14 @@ const colGrid = ({
   children,
   marginTop,
   marginBottom,
+  backgroundColor,
+  borderRadius,
 }) => {
   return (
     <div
       style={{
+        backgroundColor: backgroundColor,
+        borderRadius: borderRadius,
         paddingLeft: paddingLeft,
         paddingRight: paddingRight,
         paddingTop: paddingTop,

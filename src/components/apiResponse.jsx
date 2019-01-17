@@ -1,4 +1,4 @@
-const api = [
+const Request = [
   {
     id: 1,
     name: "Business Insider",
@@ -56,4 +56,4 @@ const api = [
   },
 ];
 
-export default api;
+export default Request;

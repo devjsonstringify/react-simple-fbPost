@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import FindFriends from "./components/layout/pages/findFriends";
+import Navigation from "./components/layout/header/header";
 import "./css/App.css";
+import Main from "./components/layout/main";
 import Col from "./components/layout/col-grid";
 import User from "./components/user";
 import Post from "./components/post";
 import PostActionBar from "./components/postActionBar";
-import Api from "./components/apiResponse";
+import Request from "./components/apiResponse";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faCheckSquare,
@@ -31,13 +35,16 @@ library.add(
   faKissWinkHeart
 );
 
-class FacebookPost extends Component {
-  render() {
+const FacebookPost = () => {
+  const Home = () => {
     return (
-      <React.Fragment>
-        {Api.map((user) => {
+      <Main>
+        {Request.map((user) => {
+          // console.log(Request.user);
           return (
             <Col
+              backgroundColor="#ffffff"
+              borderRadius="3px"
               key={user.id}
               paddingTop="15px"
               paddingBottom="15px"
@@ -48,9 +55,18 @@ class FacebookPost extends Component {
             </Col>
           );
         })}
-      </React.Fragment>
+      </Main>
     );
-  }
-}
+  };
+  return (
+    <Router>
+      <React.Fragment>
+        <Navigation />
+        <Route path="/" exact component={Home} />
+        <Route path="/find-friends" exact component={FindFriends} />
+      </React.Fragment>
+    </Router>
+  );
+};
 
 export default FacebookPost;

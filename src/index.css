@@ -30,11 +30,6 @@ code {
 .col-lg-12 > .figure {
   display: flex;
 }
-.col-lg-12 > .figure > img {
-  border-radius: 100%;
-  max-width: 50px;
-  max-height: 50px;
-}
 .row.postDisplay {
   margin-top: 1em;
 }

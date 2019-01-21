@@ -7,14 +7,10 @@ const style = {
 };
 
 const Avatar = ({ user }) => {
+  const { avatar, name } = user;
   return (
     <React.Fragment>
-      <img
-        style={style}
-        className="img-responsive"
-        src={user.avatarUrl}
-        alt={user.name}
-      />
+      <img style={style} className="img-responsive" src={avatar} alt={name} />
     </React.Fragment>
   );
 };

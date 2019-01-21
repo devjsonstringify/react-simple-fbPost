@@ -36,11 +36,11 @@ library.add(
 );
 
 const FacebookPost = () => {
+  const { info } = Request;
   const Home = () => {
     return (
       <Main>
-        {Request.map((user) => {
-          // console.log(Request.user);
+        {Request.post.map((user) => {
           return (
             <Col
               backgroundColor="#ffffff"
@@ -51,7 +51,7 @@ const FacebookPost = () => {
               marginTop="1em">
               <User user={user} />
               <Post content={user} photos={user} user={user} />
-              <PostActionBar user={user} />
+              <PostActionBar user={info} />
             </Col>
           );
         })}
@@ -61,9 +61,9 @@ const FacebookPost = () => {
   return (
     <Router>
       <React.Fragment>
-        <Navigation />
+        <Navigation user={info} cssFontcolor="red" />
         <Route path="/" exact component={Home} />
-        <Route path="/find-friends" exact component={FindFriends} />
+        <Route path="/find-friends" component={FindFriends} />
       </React.Fragment>
     </Router>
   );

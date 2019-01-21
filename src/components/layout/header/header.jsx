@@ -1,7 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import Avatar from "../../avatar";
-import TestAvatar from "../../test-avatar";
 import User from "../../user";
 
 const mainHeader = {

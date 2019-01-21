@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Avatar from "./avatar";
 import Info from "./info";
 import Col from "./layout/col-grid";
+import LastOnline from "./lastOnline";
 
 const User = ({ user, cssFontcolor, cssFontWeight }) => {
   return (
@@ -10,6 +11,7 @@ const User = ({ user, cssFontcolor, cssFontWeight }) => {
         <Avatar user={user} />
         <figcaption className="figure-caption">
           <Info user={user} cssFontcolor={cssFontcolor} />
+          <LastOnline user={user} />
         </figcaption>
       </figure>
     </Col>

@@ -72,6 +72,7 @@ class PostActionBar extends Component {
   };
 
   render() {
+    const { user } = this.props;
     return (
       <div className="col-lg-12">
         <div className="container">
@@ -119,7 +120,7 @@ class PostActionBar extends Component {
 
           <Row classes="row postDisplay">
             {this.state.commentIsClicked && (
-              <Comment user={this.props.user} maxLetters={140} />
+              <Comment user={user} maxLetters={140} />
             )}
             {this.state.shareIsClicked && <Share />}
           </Row>

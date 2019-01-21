@@ -3,7 +3,7 @@ import React from "react";
 const colGrid = ({
   col,
   paddingLeft,
-  paddingRight,
+  paddingRight, 
   paddingTop,
   paddingBottom,
   children,

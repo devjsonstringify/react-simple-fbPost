@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import Avatar from "../../avatar";
+import TestAvatar from "../../test-avatar";
+import User from "../../user";
 
 const mainHeader = {
   backgroundColor: "#4267b2",
@@ -11,11 +13,11 @@ const anchorColor = {
   color: "#ffffff",
 };
 
-const Header = ({ user }) => {
+const Header = ({ user, img, alt }) => {
   return (
-    <div className="container-fluid">
-      <div className="container">
-        <nav className="navbar fixed-top navbar-expand-lg" style={mainHeader}>
+    <div className="container-fluid" style={mainHeader}>
+      <div className="container" style={{ overflow: "hidden", height: "100%" }}>
+        <nav className="navbar navbar-expand-lg" style={{ padding: "0" }}>
           <Link className="navbar-brand" to="/" style={anchorColor}>
             Facebook
           </Link>
@@ -29,10 +31,16 @@ const Header = ({ user }) => {
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div
+            className="collapse navbar-collapse"
+            id="navbarNav"
+            style={{ justifyContent: "flex-end" }}>
             <ul className="navbar-nav">
+              <li className="nav-item" id="user-item">
+                <User user={user} cssFontcolor="#ffffff" />
+              </li>
               <li className="nav-item">
-                <NavLink to="/" exact className="nav-link" style={anchorColor}>
+                <NavLink to="/" className="nav-link" style={anchorColor}>
                   Home
                 </NavLink>
               </li>

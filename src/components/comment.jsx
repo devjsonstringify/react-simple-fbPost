@@ -19,7 +19,7 @@ class Comment extends Component {
   render() {
     const { characterCount } = this.state;
     const { maxLetters, user } = this.props;
-
+    console.log(user.avatar);
     const style = {
       border: "1px solid #ccd0d5",
       borderRadius: "50px",
@@ -27,6 +27,7 @@ class Comment extends Component {
       backgroundColor: "#f2f3f5",
       flexBasis: "89%",
     };
+
     return (
       <React.Fragment>
         <Col col="12">

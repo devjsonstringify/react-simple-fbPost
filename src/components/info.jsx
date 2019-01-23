@@ -2,10 +2,6 @@ import React from "react";
 
 const Info = ({ user, cssFontcolor }) => {
   const { userfbURL, name } = user;
-  // const style = {
-  //   color: { cssFontcolor? "#365899" : null},
-  //   fontWeight: "600",
-  // };
   return (
     <React.Fragment>
       <p className="h6">

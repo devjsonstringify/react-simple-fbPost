@@ -4,7 +4,7 @@ import Info from "./info";
 import Col from "./layout/col-grid";
 import LastOnline from "./lastOnline";
 
-const User = ({ user, cssFontcolor, cssFontWeight }) => {
+const User = ({ user, cssFontcolor }) => {
   return (
     <Col col="lg-12" paddingLeft="0" paddingRight="0">
       <figure className="figure">

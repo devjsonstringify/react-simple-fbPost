@@ -29,6 +29,7 @@ code {
 }
 .col-lg-12 > .figure {
   display: flex;
+  align-items: center;
 }
 .row.postDisplay {
   margin-top: 1em;
@@ -62,4 +63,9 @@ code {
 .btn-link.btn-lg:hover {
   cursor: pointer;
   text-decoration: none;
+}
+
+/* DISPLAY NONE */
+#user-item .h6 + svg {
+  display: none;
 }

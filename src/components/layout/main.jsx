@@ -1,7 +1,7 @@
 import React from "react";
 
 const style = {
-  marginTop: "4%",
+  marginTop: "1%",
 };
 const Main = ({ children }) => {
   return (

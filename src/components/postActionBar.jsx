@@ -13,7 +13,7 @@ class PostActionBar extends Component {
     this.state = {
       likeCount: 0,
       likeHover: false,
-      likeIsClicked: false,
+      // likeIsClicked: false,
       commentIsClicked: false,
       shareIsClicked: false,
     };
@@ -45,14 +45,13 @@ class PostActionBar extends Component {
 
   //IsClicked?
   likeIsClicked = () => {
-    this.setState(
-      (prevState) => ({
-        likeIsClicked: !prevState.likeIsClicked,
-      }),
-      this.setState((prevState) => ({
-        likeCount: 1,
-      }))
-    );
+    // this.setState(
+    //   (prevState) => ({
+    //     likeIsClicked: !prevState.likeIsClicked,
+    //   }),
+    this.setState((prevState) => ({
+      likeCount: 1,
+    }));
   };
 
   //IsClicked?
@@ -73,14 +72,28 @@ class PostActionBar extends Component {
 
   render() {
     const { user } = this.props;
+    const { likes, comments, shares } = user;
     return (
       <div className="col-lg-12">
         <div className="container">
-          <Row>
+          <Row id="fb-counters">
             <Col>
-              {this.state.likeIsClicked && (
-                <Counter counter={this.state.likeCount} />
-              )}
+              <ul>
+                <Counter
+                  counter={Object.keys(likes).length}
+                  text={Object.keys(likes).length > 1 ? "Likes" : "Like"}
+                />
+                <Counter
+                  counter={Object.keys(comments).length}
+                  text={
+                    Object.keys(comments).length > 1 ? "Comments" : "Comment"
+                  }
+                />
+                <Counter
+                  counter={Object.keys(shares).length}
+                  text={Object.keys(shares).length > 1 ? "Shares" : "Share"}
+                />
+              </ul>
             </Col>
           </Row>
 

@@ -1,17 +1,17 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Counter = ({ counter }) => {
-	return (
-		<React.Fragment>
-			<p className='text-center'>
-				<span>
-					<FontAwesomeIcon icon='grin' />
-					{counter}
-				</span>
-			</p>
-		</React.Fragment>
-	)
-}
+const Counter = ({ counter, text }) => {
+  const style = { color: "#606770", fontSize: "14px" };
+  return (
+    <React.Fragment>
+      <li>
+        <span style={style}>
+          {counter} {text}
+        </span>
+      </li>
+    </React.Fragment>
+  );
+};
 
-export default Counter
+export default Counter;

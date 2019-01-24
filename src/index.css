@@ -65,11 +65,10 @@ code {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 /* DISPLAY NONE */
 #user-item .h6 + svg {
   display: none;
-=======
+}
 /* FB counter */
 #fb-counters ul {
   list-style: none;
@@ -82,5 +81,4 @@ code {
 }
 #fb-counters ul li:nth-child(-n + 2) {
   margin-right: 10px;
->>>>>>> hotfix
 }

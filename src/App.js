@@ -43,6 +43,7 @@ const FacebookPost = () => {
     return (
       <Main>
         {Request.post.map((user) => {
+          // console.log(user.comments.map((key) => key.fromUser));
           return (
             <Col
               backgroundColor="#ffffff"
@@ -53,7 +54,7 @@ const FacebookPost = () => {
               marginTop="1em">
               <User user={user} />
               <Post content={user} photos={user} user={user} />
-              <PostActionBar user={info} />
+              <PostActionBar user={user} />
             </Col>
           );
         })}

@@ -65,7 +65,22 @@ code {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* DISPLAY NONE */
 #user-item .h6 + svg {
   display: none;
+=======
+/* FB counter */
+#fb-counters ul {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+#fb-counters ul li:first-child {
+  flex-basis: 50%;
+  flex-grow: 2;
+}
+#fb-counters ul li:nth-child(-n + 2) {
+  margin-right: 10px;
+>>>>>>> hotfix
 }

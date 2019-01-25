@@ -4,7 +4,7 @@ const Info = ({ user, cssFontcolor }) => {
   const { userfbURL, name } = user;
   return (
     <React.Fragment>
-      <p className="h6">
+      <p style={{ marginBottom: "0" }} className="h6">
         <a
           style={{
             color: cssFontcolor ? cssFontcolor : null,

@@ -11,10 +11,17 @@ const LastOnline = ({ user }) => {
       : null
   );
 
+  const style = {
+    paddingLeft: "0",
+    listStyle: "none",
+    display: "flex",
+  };
+
   return (
-    <React.Fragment>
-      {lastseen} {globeIcon}
-    </React.Fragment>
+    <ul style={style}>
+      <li style={{ marginRight: "10px" }}>{lastseen}</li>
+      <li>{globeIcon}</li>
+    </ul>
   );
 };
 

@@ -26,10 +26,3 @@ const shareItem = ({ options, option }) => {
 };
 
 export default shareItem;
-
-/**{options.map( (option) => {
-		return <li className="nav-item">
-		<a className="nav-link" href={option.link}>
-		{option.item}
-		</a>
-		</li> */

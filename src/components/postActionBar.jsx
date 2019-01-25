@@ -73,11 +73,21 @@ class PostActionBar extends Component {
   render() {
     const { user } = this.props;
     const { likes, comments, shares } = user;
+
+    const counterRow = {
+      borderTop: "1px solid #ccd0d5",
+      marginTop: "2px",
+    };
+
+    const padding = {
+      paddingLeft: "0",
+      paddingRight: "0",
+    };
     return (
-      <div className="col-lg-12">
+      <Col style={padding}>
         <div className="container">
-          <Row id="fb-counters">
-            <Col>
+          <Row id="fb-counters" style={counterRow}>
+            <Col paddingLeft="0" paddingRight="0">
               <ul>
                 <Counter
                   counter={Object.keys(likes).length}
@@ -100,7 +110,7 @@ class PostActionBar extends Component {
           <LikeEmoji isVisible={this.state.likeHover} />
 
           <Row id="fbBttons">
-            <Col paddingLeft="0" paddingRight="0">
+            <Col style={padding}>
               <Button
                 icon="thumbs-up"
                 handleClick={this.likeIsClicked}
@@ -109,30 +119,30 @@ class PostActionBar extends Component {
                 btn={"Like"}
               />
             </Col>
-            <Col paddingLeft="0" paddingRight="0">
+            <Col style={padding}>
               <Button
                 icon="comment-alt"
                 handleClick={this.commentIsClicked}
-                btn={"comment"}
+                btn={"Comment"}
               />
             </Col>
-            <Col paddingLeft="0" paddingRight="0">
+            <Col style={padding}>
               <Button
                 icon="share"
                 handleClick={this.shareIsClicked}
-                btn={"share"}
+                btn={"Share"}
               />
             </Col>
           </Row>
 
-          <Row classes="row postDisplay">
-            {this.state.commentIsClicked && (
+          {this.state.commentIsClicked && (
+            <Row classes="row postDisplay">
               <Comment user={user} maxLetters={140} />
-            )}
-            {this.state.shareIsClicked && <Share />}
-          </Row>
+            </Row>
+          )}
+          {this.state.shareIsClicked && <Share />}
         </div>
-      </div>
+      </Col>
     );
   }
 }

@@ -27,9 +27,6 @@ code {
 #root > .col:first-child {
   margin-top: 0 !important;
 }
-.col-lg-12 > .figure {
-  display: flex;
-}
 .row.postDisplay {
   margin-top: 1em;
 }
@@ -53,7 +50,6 @@ code {
   margin: 0 !important;
 }
 #fbBttons {
-  border-bottom: 1px solid #ccd0d5;
   border-top: 1px solid #ccd0d5;
 }
 #fbBttons > .col:hover {
@@ -69,6 +65,7 @@ code {
   list-style: none;
   display: flex;
   padding-left: 0;
+  margin: 10px 0;
 }
 #fb-counters ul li:first-child {
   flex-basis: 50%;

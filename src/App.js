@@ -22,6 +22,7 @@ import {
   faFrown,
   faKissWinkHeart,
   faGlobeAsia,
+  faEllipsisH,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faCheckSquare,
@@ -34,24 +35,25 @@ library.add(
   faAngry,
   faFrown,
   faKissWinkHeart,
+  faEllipsisH,
   faGlobeAsia
 );
 
 const FacebookPost = () => {
   const { info } = Request;
   const Home = () => {
+    const main = {
+      backgroundColor: "#ffffff",
+      borderRadius: "3px",
+      paddingTop: "15px",
+      paddingBottom: "15px",
+      marginTop: "1em",
+    };
     return (
       <Main>
         {Request.post.map((user) => {
-          // console.log(user.comments.map((key) => key.fromUser));
           return (
-            <Col
-              backgroundColor="#ffffff"
-              borderRadius="3px"
-              key={user.id}
-              paddingTop="15px"
-              paddingBottom="15px"
-              marginTop="1em">
+            <Col style={main} key={user.id}>
               <User user={user} />
               <Post content={user} photos={user} user={user} />
               <PostActionBar user={user} />

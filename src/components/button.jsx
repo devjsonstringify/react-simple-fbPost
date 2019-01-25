@@ -15,7 +15,9 @@ const Button = ({ handleClick, onMouseEnter, onMouseLeave, icon, btn }) => {
       type="button"
       className="btn-link btn-lg">
       <ButtonIcon icon={icon} />
-      <span style={{ fontSize: "1rem" }}>{btn}</span>
+      <span style={{ fontSize: "14px", color: "rgb(96, 103, 112)" }}>
+        {btn}
+      </span>
     </button>
   );
 };

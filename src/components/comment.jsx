@@ -19,7 +19,7 @@ class Comment extends Component {
   render() {
     const { characterCount } = this.state;
     const { maxLetters, user } = this.props;
-    const style = {
+    const textarea = {
       border: "1px solid #ccd0d5",
       borderRadius: "50px",
       height: "40px",
@@ -32,7 +32,7 @@ class Comment extends Component {
         <Col col="12">
           <Avatar user={user} />
           <textarea
-            style={style}
+            style={textarea}
             className="form-control"
             placeholder="Write a comment..."
             onChange={this.handleChange}

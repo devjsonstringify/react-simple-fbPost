@@ -5,8 +5,12 @@ import Row from './layout/row'
 import Col from './layout/col-grid'
 
 const Post = ({ content, photos }) => {
+	const post = {
+		paddingLeft: '0',
+		paddingRight: '0'
+	}
 	return (
-		<Col col="lg-12" paddingLeft="0" paddingRight="0">
+		<Col col="lg-12" style={post}>
 			<Row>
 				<Content user={content} />
 				<Photos user={photos} />

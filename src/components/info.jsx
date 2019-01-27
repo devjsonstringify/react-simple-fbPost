@@ -1,6 +1,6 @@
 import React from "react";
 
-const Info = ({ user, cssFontcolor }) => {
+const Info = ({ user, cssFontcolor, cssFontSize }) => {
   const { userfbURL, name } = user;
   return (
     <React.Fragment>
@@ -8,7 +8,7 @@ const Info = ({ user, cssFontcolor }) => {
         <a
           style={{
             color: cssFontcolor ? cssFontcolor : null,
-            fontWeight: "600",
+            fontWeight: cssFontSize ? cssFontSize : "600",
           }}
           href={userfbURL}>
           {name}

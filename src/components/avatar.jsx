@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 
-const style = {
+const defaultSize = {
   borderRadius: "100%",
   maxWidth: "40px",
   maxHeight: "40px",
 };
 
-const Avatar = ({ user }) => {
+const Avatar = ({ user, view }) => {
   const { avatar, name } = user;
   return (
     <React.Fragment>
-      <img style={style} className="img-responsive" src={avatar} alt={name} />
+      <img
+        style={view ? view : defaultSize}
+        className="img-responsive"
+        src={avatar}
+        alt={name}
+      />
     </React.Fragment>
   );
 };

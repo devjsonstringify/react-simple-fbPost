@@ -6,7 +6,7 @@ import LastOnline from "./lastOnline";
 import ButtonIcon from "./buttonIcon";
 import Row from "./layout/row";
 
-const User = ({ user, cssFontcolor }) => {
+const User = ({ user, cssFontcolor, cssFontSize, view }) => {
   const figcaption = {
     display: "flex",
     flexDirection: "column",
@@ -19,16 +19,36 @@ const User = ({ user, cssFontcolor }) => {
     justifyContent: "space-between",
   };
 
+  const flex = {
+    display: "flex",
+  };
+
+  const isView = {
+    display: "flex",
+    alignItems: "center",
+    margin: "0 auto",
+    padding: "5px",
+  };
+
+  const customSize = {
+    borderRadius: "100%",
+    maxWidth: "30px",
+    maxHeight: "30px",
+  };
   return (
     <Col col="lg-12" style={avatar}>
-      <figure className="figure" style={{ display: "flex" }}>
-        <Avatar user={user} />
+      <figure className="figure" style={view ? isView : flex}>
+        <Avatar view={view ? customSize : null} user={user} />
         <figcaption style={figcaption} className="figure-caption">
-          <Info user={user} cssFontcolor={cssFontcolor} />
-          <LastOnline user={user} />
+          <Info
+            user={user}
+            cssFontcolor={cssFontcolor}
+            cssFontSize={cssFontSize}
+          />
+          {view ? null : <LastOnline user={user} />}
         </figcaption>
       </figure>
-      <ButtonIcon icon="ellipsis-h" />
+      {view ? null : <ButtonIcon icon="ellipsis-h" />}
     </Col>
   );
 };

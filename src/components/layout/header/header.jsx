@@ -11,8 +11,14 @@ const anchorColor = {
   color: "#ffffff",
 };
 
+const cssCustom = {
+  color: "#ffffff",
+  fontWeight: "normal",
+  fontSize: "12px",
+};
 const Header = ({ user, img, alt }) => {
   const view = true;
+  console.log(cssCustom);
   return (
     <div className="container-fluid" style={mainHeader}>
       <div className="container" style={{ overflow: "hidden", height: "100%" }}>
@@ -36,12 +42,7 @@ const Header = ({ user, img, alt }) => {
             style={{ justifyContent: "flex-end" }}>
             <ul className="navbar-nav">
               <li className="nav-item" id="user-item">
-                <User
-                  view={view}
-                  user={user}
-                  cssFontcolor="#ffffff"
-                  cssFontSize="normal"
-                />
+                <User view={view} user={user} cssCustom={cssCustom} />
               </li>
               <li className="nav-item">
                 <NavLink to="/" className="nav-link" style={anchorColor}>

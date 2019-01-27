@@ -6,7 +6,7 @@ import LastOnline from "./lastOnline";
 import ButtonIcon from "./buttonIcon";
 import Row from "./layout/row";
 
-const User = ({ user, cssFontcolor, cssFontSize, view }) => {
+const User = ({ user, cssCustom, view }) => {
   const figcaption = {
     display: "flex",
     flexDirection: "column",
@@ -27,7 +27,6 @@ const User = ({ user, cssFontcolor, cssFontSize, view }) => {
     display: "flex",
     alignItems: "center",
     margin: "0 auto",
-    padding: "5px",
   };
 
   const customSize = {
@@ -40,11 +39,7 @@ const User = ({ user, cssFontcolor, cssFontSize, view }) => {
       <figure className="figure" style={view ? isView : flex}>
         <Avatar view={view ? customSize : null} user={user} />
         <figcaption style={figcaption} className="figure-caption">
-          <Info
-            user={user}
-            cssFontcolor={cssFontcolor}
-            cssFontSize={cssFontSize}
-          />
+          <Info user={user} cssCustom={cssCustom} />
           {view ? null : <LastOnline user={user} />}
         </figcaption>
       </figure>

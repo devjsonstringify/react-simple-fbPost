@@ -71,7 +71,7 @@ class PostActionBar extends Component {
   };
 
   render() {
-    const { user } = this.props;
+    const { user, info } = this.props;
     const { likes, comments, shares } = user;
 
     const counterRow = {
@@ -137,7 +137,7 @@ class PostActionBar extends Component {
 
           {this.state.commentIsClicked && (
             <Row classes="row postDisplay">
-              <Comment user={user} maxLetters={140} />
+              <Comment user={info} maxLetters={140} />
             </Row>
           )}
           {this.state.shareIsClicked && <Share />}

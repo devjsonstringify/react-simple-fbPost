@@ -22,15 +22,22 @@ class Comment extends Component {
     const textarea = {
       border: "1px solid #ccd0d5",
       borderRadius: "50px",
-      height: "40px",
+      maxHeight: "35px",
+      overflow: "hidden",
       backgroundColor: "#f2f3f5",
-      flexBasis: "89%",
+      flexBasis: "92%",
     };
 
+    const circleAvatar = {
+      flexBasis: "5%",
+      borderRadius: "100%",
+      maxWidth: "30px",
+      maxHeight: "30px",
+    };
     return (
       <React.Fragment>
         <Col col="12">
-          <Avatar user={user} />
+          <Avatar view={circleAvatar} user={user} />
           <textarea
             style={textarea}
             className="form-control"

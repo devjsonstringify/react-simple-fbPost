@@ -23,6 +23,7 @@ import {
   faKissWinkHeart,
   faGlobeAsia,
   faEllipsisH,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faCheckSquare,
@@ -36,7 +37,8 @@ library.add(
   faFrown,
   faKissWinkHeart,
   faEllipsisH,
-  faGlobeAsia
+  faGlobeAsia,
+  faSearch
 );
 
 const FacebookPost = () => {

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import User from "../../user";
+import SearchForm from "../../searchForm";
+import Row from "../row";
 
 const mainHeader = {
   backgroundColor: "#4267b2",
@@ -11,6 +13,7 @@ const anchorColor = {
   color: "#ffffff",
   fontSize: "12px",
   fontWeight: "600",
+  marginRight: "5px",
 };
 
 const cssCustom = {
@@ -18,18 +21,47 @@ const cssCustom = {
   fontWeight: "normal",
   fontSize: "12px",
 };
+
+const logo = {
+  borderRadius: "3px",
+  width: "24px",
+  height: "24px",
+  display: "block",
+  backgroundSize: "auto",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "0 442px",
+  overflow: "hidden",
+};
+
+const searchIcon = {
+  color: "red",
+  backgroundColor: "#ff",
+  borderColor: "rgba(255, 255, 255, 0)",
+  borderRadius: "0",
+  display: "flex",
+};
 const Header = ({ user, img, alt }) => {
   const view = true;
-  console.log(cssCustom);
+  const form = {
+    flexWrap: "nowrap",
+    width: "calc(100% - 30%)",
+    alignItems: "center",
+  };
+
   return (
     <div className="container-fluid" style={mainHeader}>
       <div className="container" style={{ overflow: "hidden", height: "100%" }}>
         <nav
           className="navbar navbar-expand-lg"
           style={{ padding: "0", height: "inherit" }}>
-          <Link className="navbar-brand" to="/" style={anchorColor}>
-            Facebook
-          </Link>
+          <Row style={form}>
+            <Link className="navbar-brand" to="/" style={anchorColor}>
+              <span style={logo}>
+                <img src={"assets/img/icons.png"} alt="facebook" />
+              </span>
+            </Link>
+            <SearchForm />
+          </Row>
           <button
             className="navbar-toggler"
             type="button"

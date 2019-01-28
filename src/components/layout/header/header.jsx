@@ -33,13 +33,6 @@ const logo = {
   overflow: "hidden",
 };
 
-const searchIcon = {
-  color: "red",
-  backgroundColor: "#ff",
-  borderColor: "rgba(255, 255, 255, 0)",
-  borderRadius: "0",
-  display: "flex",
-};
 const Header = ({ user, img, alt }) => {
   const view = true;
   const form = {

@@ -13,7 +13,7 @@ class PostActionBar extends Component {
     this.state = {
       likeCount: 0,
       likeHover: false,
-      // likeIsClicked: false,
+      likeIsClicked: false,
       commentIsClicked: false,
       shareIsClicked: false,
     };
@@ -38,19 +38,15 @@ class PostActionBar extends Component {
 
   //like increment
   handleLikeCount = () => {
-    this.setState((prevState) => ({
-      likeCount: prevState.likeCount + 1,
-    }));
+    // this.setState((prevState) => ({
+    //   likeCount: prevState.likeCount + 1,
+    // }));
   };
 
-  //IsClicked?
-  likeIsClicked = () => {
-    // this.setState(
-    //   (prevState) => ({
-    //     likeIsClicked: !prevState.likeIsClicked,
-    //   }),
+  //LIKE
+  likeIsClicked = (e, props) => {
     this.setState((prevState) => ({
-      likeCount: 1,
+      likeIsClicked: !prevState.likeIsClicked,
     }));
   };
 
@@ -83,25 +79,39 @@ class PostActionBar extends Component {
       paddingLeft: "0",
       paddingRight: "0",
     };
+
+    const totalLikes = Object.keys(likes).length;
+    const totalComments = Object.keys(comments).length;
+    const totalShares = Object.keys(shares).length;
+
     return (
       <Col style={padding}>
         <div className="container">
           <Row id="fb-counters" style={counterRow}>
             <Col paddingLeft="0" paddingRight="0">
               <ul>
+                {this.state.likeIsClicked ? (
+                  <Counter
+                    text={
+                      totalLikes > 1
+                        ? "You and " + totalLikes + " " + "others"
+                        : "You and " + totalLikes
+                    }
+                  />
+                ) : (
+                  <Counter
+                    counter={totalLikes}
+                    text={totalLikes > 1 ? "Likes" : "Like"}
+                  />
+                )}
+
                 <Counter
-                  counter={Object.keys(likes).length}
-                  text={Object.keys(likes).length > 1 ? "Likes" : "Like"}
+                  counter={totalComments}
+                  text={totalComments > 1 ? "Comments" : "Comment"}
                 />
                 <Counter
-                  counter={Object.keys(comments).length}
-                  text={
-                    Object.keys(comments).length > 1 ? "Comments" : "Comment"
-                  }
-                />
-                <Counter
-                  counter={Object.keys(shares).length}
-                  text={Object.keys(shares).length > 1 ? "Shares" : "Share"}
+                  counter={totalShares}
+                  text={totalShares > 1 ? "Shares" : "Share"}
                 />
               </ul>
             </Col>
@@ -113,7 +123,7 @@ class PostActionBar extends Component {
             <Col style={padding}>
               <Button
                 icon="thumbs-up"
-                handleClick={this.likeIsClicked}
+                handleClick={(e) => this.likeIsClicked(totalLikes)}
                 onMouseEnter={this.showEmoji}
                 onMouseLeave={this.hideEmoji}
                 btn={"Like"}

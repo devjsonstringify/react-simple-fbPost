@@ -18,9 +18,19 @@ const cssCustom = {
   fontWeight: "normal",
   fontSize: "12px",
 };
+
+const logo = {
+  width: "24px",
+  height: "24px",
+  display: "block",
+  backgroundSize: "auto",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "0 442px",
+  overflow: "hidden",
+};
 const Header = ({ user, img, alt }) => {
   const view = true;
-  console.log(cssCustom);
+
   return (
     <div className="container-fluid" style={mainHeader}>
       <div className="container" style={{ overflow: "hidden", height: "100%" }}>
@@ -28,7 +38,9 @@ const Header = ({ user, img, alt }) => {
           className="navbar navbar-expand-lg"
           style={{ padding: "0", height: "inherit" }}>
           <Link className="navbar-brand" to="/" style={anchorColor}>
-            Facebook
+            <span style={logo}>
+              <img src={"assets/img/icons.png"} alt="facebook" />
+            </span>
           </Link>
           <button
             className="navbar-toggler"

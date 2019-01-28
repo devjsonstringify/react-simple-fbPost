@@ -78,3 +78,26 @@ code {
 #fb-counters ul li:nth-child(-n + 2) {
   margin-right: 10px;
 }
+
+/* MENU */
+ul.navbar-nav {
+  cursor: pointer;
+}
+ul.navbar-nav li {
+  position: relative;
+  font-size: 12px;
+  margin-right: 5px;
+}
+ul.navbar-nav li:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+ul.navbar-nav li:nth-child(n + 2):before {
+  position: absolute;
+  display: block;
+  width: 1px;
+  content: "";
+  height: 18px;
+  top: 12px;
+  background: rgba(0, 0, 0, 0.1);
+}

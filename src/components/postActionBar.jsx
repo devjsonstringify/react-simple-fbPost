@@ -147,7 +147,7 @@ class PostActionBar extends Component {
 
           {this.state.commentIsClicked && (
             <Row classes="row postDisplay">
-              <Comment user={info} maxLetters={140} />
+              <Comment user={info} maxLetters={140} comments={comments} />
             </Row>
           )}
           {this.state.shareIsClicked && <Share />}

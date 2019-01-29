@@ -58,7 +58,7 @@ const FacebookPost = () => {
             <Col style={main} key={user.id}>
               <User user={user} />
               <Post content={user} photos={user} user={user} />
-              <PostActionBar info={info} user={user} />
+              <PostActionBar info={info} user={user} comments={user.comments} />
             </Col>
           );
         })}
